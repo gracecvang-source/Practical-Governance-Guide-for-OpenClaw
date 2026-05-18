@@ -89,6 +89,33 @@ Most users try to fix hallucination by adding rules like "don't lie" or "always 
 
 ---
 
+## Governance Is Not Control Theater
+
+Governance only helps if it changes what the agent actually does.
+
+A vague rule like "be safe" or "be accurate" may sound good, but it does not tell the agent what to do when it is uncertain, blocked, wrong, missing a tool, or working from stale information.
+
+Good governance creates checkable behavior:
+
+- The agent names what it knows and what it does not know.
+- The agent shows evidence before claiming work is complete.
+- The agent reports errors instead of hiding them.
+- The agent asks before acting on risky assumptions.
+- The agent separates proposals, decisions, and completed work.
+- The user can look at an artifact, command result, timestamp, file path, or message record and verify what happened.
+
+If a governance rule does not change evidence, decisions, failure reporting, or user consent, it may be decoration rather than governance.
+
+A useful test is simple:
+
+```text
+What behavior would this rule change, and how would I know it changed?
+```
+
+If you cannot answer that, rewrite the rule until it produces something observable.
+
+---
+
 ## After You Add These
 
 Test it. Give your agent a task it can't fully complete and see if it tells you honestly instead of faking it. If it still hallucinates, check:
